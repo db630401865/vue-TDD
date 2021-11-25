@@ -15,7 +15,7 @@
         <!-- These are here just to show the structure of the list items -->
         <!-- List items should get the class `editing` when editing and `completed` when marked as completed -->
         <TodoItem
-          v-for="todo in filterTodos"
+          v-for="todo in todos"
           :key="todo.id"
           :todo="todo"
           @delete-todo="handleDelteTodo"
@@ -64,20 +64,20 @@ export default {
     // 过滤数据
     filterTodos () {
       // 获取路由路径
-      const path = this.$route.path
+      // const path = this.$route.path
       // 根据路由路径过滤数据
       // / 所有的任务列表
       // /active 所有的未完成任务
       // /completed 所有的已完成任务
-      let todos = this.todos
-      switch (path) {
-        case '/active':
-          todos = this.todos.filter(t => !t.done)
-          break
-        case '/completed':
-          todos = this.todos.filter(t => t.done)
-          break
-      }
+      const todos = this.todos
+      // switch (path) {
+      //   case '/active':
+      //     todos = this.todos.filter(t => !t.done)
+      //     break
+      //   case '/completed':
+      //     todos = this.todos.filter(t => t.done)
+      //     break
+      // }
       return todos
     }
   },
