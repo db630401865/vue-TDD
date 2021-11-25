@@ -1,5 +1,5 @@
 # vue-test
-
+[![codecov](https://codecov.io/gh/db630401865/vue-TDD/branch/master/graph/badge.svg?token=PNOP8P607G)](https://codecov.io/gh/db630401865/vue-TDD)
 ## Project setup
 ```
 npm install
