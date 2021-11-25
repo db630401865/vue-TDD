@@ -15,4 +15,8 @@ describe('TodoHeader.vue', () => {
     expect(wrapper.emitted()['new-todo'][0][0]).toBe(text)
     expect(input.element.value).toBe('')
   })
+
+  test('snapshot', () => {
+    expect(wrapper.html()).toMatchSnapshot()
+  })
 })
